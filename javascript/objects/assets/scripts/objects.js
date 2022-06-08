@@ -12,12 +12,11 @@ const renderMovies = (filter = '') => {
   } else {
     movieList.classList.add('visible');
   }
-
   movieList.innerHTML = '';
 
   const filteredMovies = !filter
     ? movies
-    : movies.filter(movie => movie.info.title.includes(filter));
+    : movies.filter((movie) => movie.info.title.includes(filter));
 
   filteredMovies.forEach((movie) => {
     const movieElem = document.createElement('li');
@@ -27,6 +26,7 @@ const renderMovies = (filter = '') => {
         text = text + `${key}: ${movie.info[key]}`;
       }
     }
+    movieElem.textContent = text;
     movieList.append(movieElem);
   });
 };
