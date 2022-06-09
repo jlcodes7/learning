@@ -71,7 +71,8 @@ class Course {
   );
   
   flutterCourse.price = 5000;
-  flutterCourse.#price = 100;
+  flutterCourse.price = 100;
+  //flutterCourse.#price = 100 on VSC shows an error but is just a private variable
   
   flutterCourse.printSummary();
   flutterCourse.publish();
